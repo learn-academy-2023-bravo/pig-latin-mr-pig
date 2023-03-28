@@ -45,7 +45,12 @@ const App = () => {
         return newWord[1].concat('qu').concat(newWord[0]).concat('ay')
       }
 
-    
+      // if word contains y and not vowel
+      if (eachWord.includes('y') && eachWord.split("").every(letter => !vowels.includes(letter))) {
+        let newWord = eachWord.split('y')
+
+        return 'y'.concat(newWord[0]).concat('ay')
+      }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
