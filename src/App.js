@@ -32,6 +32,12 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
+      
+      const vowels = ['a', 'e', 'i', 'o', 'u']
+
+      if (vowels.includes(eachWord.charAt(0))) {
+        return eachWord.concat('way')
+      }
 
     
 
