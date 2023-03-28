@@ -39,6 +39,12 @@ const App = () => {
         return eachWord.concat('way')
       }
 
+      // qu words
+      if (eachWord.includes('qu')) {
+        let newWord = eachWord.split('qu')
+        return newWord[1].concat('qu').concat(newWord[0]).concat('ay')
+      }
+
     
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
