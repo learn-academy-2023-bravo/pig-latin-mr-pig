@@ -1,5 +1,5 @@
 * {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: Lato, 'Josefin Sans', sans-serif;
   text-align: center;
 }
 
@@ -23,7 +23,9 @@ button {
 }
 
 .body-container {
-  padding-bottom: 3rem;
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
 }
 
 .page-container {
@@ -32,18 +34,39 @@ button {
 }
 
 .input-section {
-  background-color: grey;
-  border-radius: .5rem;
+  background-color: #010b1caa;
+  border-radius: 1rem;
   color: #fff;
   margin: 1rem;
-  padding: 1rem;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .user-input {
-  border-radius: .5rem;
+  border-radius: 1rem;
   font-size: 1rem;
   height: 3rem;
-  width: 30rem;
+  width: 100%;
+}
+
+input, button {
+  background-color: transparent;
+  border: 1px solid #608b98;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: red;
+}
+
+.primary {
+  background-color: #608b9834;
 }
 
 /* ---FOOTER--- */
