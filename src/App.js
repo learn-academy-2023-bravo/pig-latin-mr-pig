@@ -42,25 +42,25 @@ const App = () => {
           return true
         }
       })
-      
-      eachWord = eachWord.
+    
       const punctuation = eachWord.charAt(indexOfPunctuation)
-
+        eachWord = eachWord.replace(punctuation, "")
+        
       if (vowels.includes(eachWord.charAt(0))) {
-        return eachWord.concat('way')
+        return eachWord.concat('way').concat(punctuation)
       }
 
       // qu words
       if (eachWord.includes('qu')) {
         let newWord = eachWord.split('qu')
-        return newWord[1].concat('qu').concat(newWord[0]).concat('ay')
+        return newWord[1].concat('qu').concat(newWord[0]).concat('ay').concat(punctuation)
       }
 
       // if word contains y and not vowel
       if (eachWord.includes('y') && eachWord.split("").every(letter => !vowels.includes(letter))) {
         let newWord = eachWord.split('y')
 
-        return 'y'.concat(newWord[0]).concat('ay')
+        return 'y'.concat(newWord[0]).concat('ay').concat(punctuation)
       }
 
       // words that have one or more consonats 
@@ -74,10 +74,11 @@ const App = () => {
       let middleSection = eachWord.slice(indexOfFirstVowel)
       let firstSection = eachWord.substring(0, indexOfFirstVowel)
 
-      return middleSection.concat(firstSection).concat("ay")
+      return middleSection.concat(firstSection).concat("ay").concat(punctuation)
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
+      
     })
 
     // NO MODIFICATION NEEDED: once the code has been modified it gets joined from an array back to a string
